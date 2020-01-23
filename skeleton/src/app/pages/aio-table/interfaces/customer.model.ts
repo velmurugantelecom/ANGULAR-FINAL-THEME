@@ -1,7 +1,7 @@
 export class Customer {
   id: number;
   imageSrc: string;
-  firstName: string;
+  first_name: string;
   lastName: string;
   street: string;
   zipcode: number;
@@ -13,7 +13,7 @@ export class Customer {
   constructor(customer) {
     this.id = customer.id;
     this.imageSrc = customer.imageSrc;
-    this.firstName = customer.firstName;
+    this.first_name = customer.first_name;
     this.lastName = customer.lastName;
     this.street = customer.street;
     this.zipcode = customer.zipcode;
@@ -26,10 +26,10 @@ export class Customer {
   get name() {
     let name = '';
 
-    if (this.firstName && this.lastName) {
-      name = this.firstName + ' ' + this.lastName;
-    } else if (this.firstName) {
-      name = this.firstName;
+    if (this.first_name && this.lastName) {
+      name = this.first_name + ' ' + this.lastName;
+    } else if (this.first_name) {
+      name = this.first_name;
     } else if (this.lastName) {
       name = this.lastName;
     }

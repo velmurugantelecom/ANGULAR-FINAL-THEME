@@ -27,6 +27,7 @@ import theme from '../../../@vex/utils/tailwindcss';
 import icPhone from '@iconify/icons-ic/twotone-phone';
 import icMail from '@iconify/icons-ic/twotone-mail';
 import icMap from '@iconify/icons-ic/twotone-map';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'vex-aio-table',
@@ -59,18 +60,18 @@ export class AioTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @Input()
   columns: TableColumn<Customer>[] = [
-    { label: 'Checkbox', property: 'checkbox', type: 'checkbox', visible: true },
+    { label: 'Checkbox', property: 'checkbox', type: 'checkbox', visible: false },
     { label: 'Image', property: 'image', type: 'image', visible: false },
-    { label: 'Name', property: 'name', type: 'text', visible: true, cssClasses: ['font-medium'] },
-    { label: 'First Name', property: 'firstName', type: 'text', visible: false },
-    { label: 'Last Name', property: 'lastName', type: 'text', visible: false },
-    { label: 'Contact', property: 'contact', type: 'button', visible: true },
+    { label: 'Name', property: 'name', type: 'text', visible: true },
+    { label: 'First Name', property: 'first_name', type: 'text', visible: true },
+    { label: 'Last Name', property: 'lastName', type: 'text', visible: true },
+    { label: 'Contact', property: 'contact', type: 'button', visible: false },
     { label: 'Address', property: 'address', type: 'text', visible: true, cssClasses: ['text-secondary', 'font-medium'] },
     { label: 'Street', property: 'street', type: 'text', visible: false, cssClasses: ['text-secondary', 'font-medium'] },
     { label: 'Zipcode', property: 'zipcode', type: 'text', visible: false, cssClasses: ['text-secondary', 'font-medium'] },
     { label: 'City', property: 'city', type: 'text', visible: false, cssClasses: ['text-secondary', 'font-medium'] },
     { label: 'Phone', property: 'phoneNumber', type: 'text', visible: true, cssClasses: ['text-secondary', 'font-medium'] },
-    { label: 'Labels', property: 'labels', type: 'button', visible: true },
+    { label: 'Labels', property: 'labels', type: 'button', visible: false },
     { label: 'Actions', property: 'actions', type: 'button', visible: true }
   ];
   pageSize = 10;
@@ -97,7 +98,8 @@ export class AioTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog, private API: ApiService) {
+    this.getAllRoles();
   }
 
   get visibleColumns() {
@@ -108,8 +110,17 @@ export class AioTableComponent implements OnInit, AfterViewInit, OnDestroy {
    * Example on how to get data and pass it to the table - usually you would want a dedicated service with a HTTP request for this
    * We are simulating this request here.
    */
+  // getData() {
+  //   return of(aioTableData.map(customer => new Customer(customer)));
+  // }
   getData() {
     return of(aioTableData.map(customer => new Customer(customer)));
+  }
+  getAllRoles() {
+    this.API.getData('user').subscribe((response) => {
+console.log('vel'+JSON.stringify(response));
+        const data = response.DataResponse.DataList;
+    });
   }
 
   ngOnInit() {

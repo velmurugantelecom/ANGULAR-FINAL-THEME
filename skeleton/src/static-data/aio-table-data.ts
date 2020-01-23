@@ -28,7 +28,7 @@ export const aioTableData = [
   {
     id: 0,
     imageSrc: 'assets/img/avatars/20.jpg',
-    firstName: 'Dejesus',
+    first_name: 'Dejesus',
     lastName: 'Chang',
     street: '899 Raleigh Place',
     zipcode: 8057,
@@ -40,7 +40,7 @@ export const aioTableData = [
   {
     id: 1,
     imageSrc: 'assets/img/avatars/1.jpg',
-    firstName: 'Short',
+    first_name: 'Short',
     lastName: 'Lowe',
     street: '548 Cypress Avenue',
     zipcode: 5943,
@@ -52,7 +52,7 @@ export const aioTableData = [
   {
     id: 2,
     imageSrc: 'assets/img/avatars/2.jpg',
-    firstName: 'Antoinette',
+    first_name: 'Antoinette',
     lastName: 'Carson',
     street: '299 Roder Avenue',
     zipcode: 7894,
@@ -64,7 +64,7 @@ export const aioTableData = [
   {
     id: 3,
     imageSrc: 'assets/img/avatars/3.jpg',
-    firstName: 'Lynnette',
+    first_name: 'Lynnette',
     lastName: 'Adkins',
     street: '158 Cyrus Avenue',
     zipcode: 4831,
@@ -76,7 +76,7 @@ export const aioTableData = [
   {
     id: 4,
     imageSrc: 'assets/img/avatars/4.jpg',
-    firstName: 'Patrica',
+    first_name: 'Patrica',
     lastName: 'Good',
     street: '995 Kansas Place',
     zipcode: 4679,
@@ -88,7 +88,7 @@ export const aioTableData = [
   {
     id: 5,
     imageSrc: 'assets/img/avatars/5.jpg',
-    firstName: 'Kane',
+    first_name: 'Kane',
     lastName: 'Koch',
     street: '779 Lynch Street',
     zipcode: 6178,
@@ -100,7 +100,7 @@ export const aioTableData = [
   {
     id: 6,
     imageSrc: 'assets/img/avatars/6.jpg',
-    firstName: 'Donovan',
+    first_name: 'Donovan',
     lastName: 'Gonzalez',
     street: '781 Knickerbocker Avenue',
     zipcode: 532,
@@ -112,7 +112,7 @@ export const aioTableData = [
   {
     id: 7,
     imageSrc: 'assets/img/avatars/7.jpg',
-    firstName: 'Sabrina',
+    first_name: 'Sabrina',
     lastName: 'Logan',
     street: '112 Glen Street',
     zipcode: 4763,
@@ -124,7 +124,7 @@ export const aioTableData = [
   {
     id: 8,
     imageSrc: 'assets/img/avatars/8.jpg',
-    firstName: 'Estela',
+    first_name: 'Estela',
     lastName: 'Jordan',
     street: '626 Stryker Court',
     zipcode: 9966,
@@ -136,7 +136,7 @@ export const aioTableData = [
   {
     id: 9,
     imageSrc: 'assets/img/avatars/9.jpg',
-    firstName: 'Rosanna',
+    first_name: 'Rosanna',
     lastName: 'Cross',
     street: '540 Fiske Place',
     zipcode: 4204,
@@ -148,7 +148,7 @@ export const aioTableData = [
   {
     id: 10,
     imageSrc: 'assets/img/avatars/10.jpg',
-    firstName: 'Mary',
+    first_name: 'Mary',
     lastName: 'Jane',
     street: '233 Glen Place',
     zipcode: 4221,
@@ -160,7 +160,7 @@ export const aioTableData = [
   {
     id: 11,
     imageSrc: 'assets/img/avatars/11.jpg',
-    firstName: 'Lane',
+    first_name: 'Lane',
     lastName: 'Delaney',
     street: 'Langham Street',
     zipcode: 6411,
@@ -172,7 +172,7 @@ export const aioTableData = [
   {
     id: 12,
     imageSrc: 'assets/img/avatars/12.jpg',
-    firstName: 'Cooper',
+    first_name: 'Cooper',
     lastName: 'Odom',
     street: 'Shale Street',
     zipcode: 5286,
@@ -184,7 +184,7 @@ export const aioTableData = [
   {
     id: 13,
     imageSrc: 'assets/img/avatars/13.jpg',
-    firstName: 'Kirby',
+    first_name: 'Kirby',
     lastName: 'Hardin',
     street: 'Rodney Street',
     zipcode: 4864,
@@ -196,7 +196,7 @@ export const aioTableData = [
   {
     id: 14,
     imageSrc: 'assets/img/avatars/14.jpg',
-    firstName: 'Marquita',
+    first_name: 'Marquita',
     lastName: 'Haynes',
     street: 'Townsend Street',
     zipcode: 9000,
@@ -208,7 +208,7 @@ export const aioTableData = [
   {
     id: 15,
     imageSrc: 'assets/img/avatars/15.jpg',
-    firstName: 'Horton',
+    first_name: 'Horton',
     lastName: 'Townsend',
     street: 'Gunnison Court',
     zipcode: 9519,
@@ -220,7 +220,7 @@ export const aioTableData = [
   {
     id: 16,
     imageSrc: 'assets/img/avatars/16.jpg',
-    firstName: 'Carrie',
+    first_name: 'Carrie',
     lastName: 'Bond',
     street: 'Bushwick Court',
     zipcode: 4345,
@@ -232,7 +232,7 @@ export const aioTableData = [
   {
     id: 17,
     imageSrc: 'assets/img/avatars/17.jpg',
-    firstName: 'Carroll',
+    first_name: 'Carroll',
     lastName: 'Pugh',
     street: 'Baltic Street',
     zipcode: 8174,
@@ -244,7 +244,7 @@ export const aioTableData = [
   {
     id: 18,
     imageSrc: 'assets/img/avatars/18.jpg',
-    firstName: 'Fuller',
+    first_name: 'Fuller',
     lastName: 'Espinoza',
     street: 'Dooley Street',
     zipcode: 9034,
@@ -256,7 +256,7 @@ export const aioTableData = [
   {
     id: 19,
     imageSrc: 'assets/img/avatars/19.jpg',
-    firstName: 'Lamb',
+    first_name: 'Lamb',
     lastName: 'Herring',
     street: 'Exeter Street',
     zipcode: 2246,
@@ -268,7 +268,7 @@ export const aioTableData = [
   {
     id: 20,
     imageSrc: 'assets/img/avatars/20.jpg',
-    firstName: 'Liza',
+    first_name: 'Liza',
     lastName: 'Price',
     street: 'Homecrest Avenue',
     zipcode: 8843,
@@ -280,7 +280,7 @@ export const aioTableData = [
   {
     id: 21,
     imageSrc: 'assets/img/avatars/1.jpg',
-    firstName: 'Monroe',
+    first_name: 'Monroe',
     lastName: 'Head',
     street: 'Arlington Avenue',
     zipcode: 2792,
@@ -292,7 +292,7 @@ export const aioTableData = [
   {
     id: 22,
     imageSrc: 'assets/img/avatars/2.jpg',
-    firstName: 'Lucile',
+    first_name: 'Lucile',
     lastName: 'Harding',
     street: 'Division Place',
     zipcode: 8572,
@@ -304,7 +304,7 @@ export const aioTableData = [
   {
     id: 23,
     imageSrc: 'assets/img/avatars/3.jpg',
-    firstName: 'Edna',
+    first_name: 'Edna',
     lastName: 'Richard',
     street: 'Harbor Lane',
     zipcode: 8323,
@@ -316,7 +316,7 @@ export const aioTableData = [
   {
     id: 24,
     imageSrc: 'assets/img/avatars/4.jpg',
-    firstName: 'Avila',
+    first_name: 'Avila',
     lastName: 'Lancaster',
     street: 'Kay Court',
     zipcode: 9294,
@@ -328,7 +328,7 @@ export const aioTableData = [
   {
     id: 25,
     imageSrc: 'assets/img/avatars/5.jpg',
-    firstName: 'Carlene',
+    first_name: 'Carlene',
     lastName: 'Newman',
     street: 'Atlantic Avenue',
     zipcode: 2230,
@@ -340,7 +340,7 @@ export const aioTableData = [
   {
     id: 26,
     imageSrc: 'assets/img/avatars/6.jpg',
-    firstName: 'Griffith',
+    first_name: 'Griffith',
     lastName: 'Wise',
     street: 'Perry Terrace',
     zipcode: 9564,
@@ -352,7 +352,7 @@ export const aioTableData = [
   {
     id: 27,
     imageSrc: 'assets/img/avatars/7.jpg',
-    firstName: 'Schwartz',
+    first_name: 'Schwartz',
     lastName: 'Dodson',
     street: 'Dorset Street',
     zipcode: 4425,
@@ -364,7 +364,7 @@ export const aioTableData = [
   {
     id: 28,
     imageSrc: 'assets/img/avatars/8.jpg',
-    firstName: 'Susanna',
+    first_name: 'Susanna',
     lastName: 'Kidd',
     street: 'Loring Avenue',
     zipcode: 6432,
@@ -376,7 +376,7 @@ export const aioTableData = [
   {
     id: 29,
     imageSrc: 'assets/img/avatars/9.jpg',
-    firstName: 'Deborah',
+    first_name: 'Deborah',
     lastName: 'Weiss',
     street: 'Haring Street',
     zipcode: 2989,
