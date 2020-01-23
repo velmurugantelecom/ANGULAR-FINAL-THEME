@@ -12,6 +12,7 @@ import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { SplashScreenService } from '../@vex/services/splash-screen.service';
 import { Style, StyleService } from '../@vex/services/style.service';
 import { ConfigName } from '../@vex/interfaces/config-name.model';
+import icAssigment from '@iconify/icons-ic/twotone-assignment';
 
 @Component({
   selector: 'vex-root',
@@ -22,15 +23,15 @@ export class AppComponent {
   title = 'vex';
 
   constructor(private configService: ConfigService,
-              private styleService: StyleService,
-              private renderer: Renderer2,
-              private platform: Platform,
-              @Inject(DOCUMENT) private document: Document,
-              @Inject(LOCALE_ID) private localeId: string,
-              private layoutService: LayoutService,
-              private route: ActivatedRoute,
-              private navigationService: NavigationService,
-              private splashScreenService: SplashScreenService) {
+    private styleService: StyleService,
+    private renderer: Renderer2,
+    private platform: Platform,
+    @Inject(DOCUMENT) private document: Document,
+    @Inject(LOCALE_ID) private localeId: string,
+    private layoutService: LayoutService,
+    private route: ActivatedRoute,
+    private navigationService: NavigationService,
+    private splashScreenService: SplashScreenService) {
     Settings.defaultLocale = this.localeId;
 
     if (this.platform.BLINK) {
@@ -82,7 +83,13 @@ export class AppComponent {
         label: 'Dashboard',
         route: '/',
         icon: icLayers
-      }
+      },
+      {
+        type: 'link',
+        label: 'All-In-One',
+        route: '/pages/aio-table',
+        icon: icAssigment
+      },
     ];
   }
 }
