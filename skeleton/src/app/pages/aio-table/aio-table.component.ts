@@ -60,18 +60,13 @@ export class AioTableComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @Input()
   columns: TableColumn<Customer>[] = [
-    { label: 'Checkbox', property: 'checkbox', type: 'checkbox', visible: false },
-    { label: 'Image', property: 'image', type: 'image', visible: false },
-    { label: 'Name', property: 'name', type: 'text', visible: true },
     { label: 'First Name', property: 'first_name', type: 'text', visible: true },
-    { label: 'Last Name', property: 'lastName', type: 'text', visible: true },
-    { label: 'Contact', property: 'contact', type: 'button', visible: false },
-    { label: 'Address', property: 'address', type: 'text', visible: true, cssClasses: ['text-secondary', 'font-medium'] },
-    { label: 'Street', property: 'street', type: 'text', visible: false, cssClasses: ['text-secondary', 'font-medium'] },
-    { label: 'Zipcode', property: 'zipcode', type: 'text', visible: false, cssClasses: ['text-secondary', 'font-medium'] },
-    { label: 'City', property: 'city', type: 'text', visible: false, cssClasses: ['text-secondary', 'font-medium'] },
-    { label: 'Phone', property: 'phoneNumber', type: 'text', visible: true, cssClasses: ['text-secondary', 'font-medium'] },
-    { label: 'Labels', property: 'labels', type: 'button', visible: false },
+    { label: 'Last Name', property: 'last_name', type: 'text', visible: true },
+    { label: 'User Name', property: 'user_name', type: 'text', visible: true },
+    { label: 'Password', property: 'password', type: 'text', visible: true },
+    { label: 'Mobile', property: 'mobile', type: 'text', visible: true },
+    { label: 'Email', property: 'email', type: 'text', visible: true },
+    { label: 'Role', property: 'roles_id', type: 'text', visible: true },
     { label: 'Actions', property: 'actions', type: 'button', visible: true }
   ];
   pageSize = 10;
@@ -99,7 +94,7 @@ export class AioTableComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
 
   constructor(private dialog: MatDialog, private API: ApiService) {
-    this.getAllRoles();
+   // this.getAllRoles();
   }
 
   get visibleColumns() {
@@ -114,18 +109,19 @@ export class AioTableComponent implements OnInit, AfterViewInit, OnDestroy {
   //   return of(aioTableData.map(customer => new Customer(customer)));
   // }
   getData() {
-    return of(aioTableData.map(customer => new Customer(customer)));
+   // return of(aioTableData.map(customer => new Customer(customer)));
   }
-  getAllRoles() {
-    this.API.getData('user').subscribe((response) => {
-console.log('vel'+JSON.stringify(response));
-        const data = response.DataResponse.DataList;
-    });
-  }
+//   getAllRoles() {
+//     this.API.getData('user').subscribe((response) => {
+// console.log('vel'+JSON.stringify(response));
+//         return  customer = response.DataResponse.DataList;
+//     });
+//   }
 
   ngOnInit() {
-    this.getData().subscribe(customers => {
-      this.subject$.next(customers);
+    this.API.getData('user').subscribe(customers => {
+    //  const  customer = customers.DataResponse.DataList;
+      this.subject$.next(customers.DataResponse.DataList);
     });
 
     this.dataSource = new MatTableDataSource();

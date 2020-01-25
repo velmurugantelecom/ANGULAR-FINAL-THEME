@@ -12,6 +12,7 @@ import icPerson from '@iconify/icons-ic/twotone-person';
 import icMyLocation from '@iconify/icons-ic/twotone-my-location';
 import icLocationCity from '@iconify/icons-ic/twotone-location-city';
 import icEditLocation from '@iconify/icons-ic/twotone-edit-location';
+import { ApiService } from '../../../services/api.service';
 
 @Component({
   selector: 'vex-customer-create-update',
@@ -39,6 +40,7 @@ export class CustomerCreateUpdateComponent implements OnInit {
   icPhone = icPhone;
 
   constructor(@Inject(MAT_DIALOG_DATA) public defaults: any,
+   private API: ApiService,
               private dialogRef: MatDialogRef<CustomerCreateUpdateComponent>,
               private fb: FormBuilder) {
   }
@@ -51,15 +53,14 @@ export class CustomerCreateUpdateComponent implements OnInit {
     }
 
     this.form = this.fb.group({
-      id: [CustomerCreateUpdateComponent.id++],
-      imageSrc: this.defaults.imageSrc,
+     // id: [CustomerCreateUpdateComponent.id++],
       first_name: [this.defaults.first_name || ''],
-      lastName: [this.defaults.lastName || ''],
-      street: this.defaults.street || '',
-      city: this.defaults.city || '',
-      zipcode: this.defaults.zipcode || '',
-      phoneNumber: this.defaults.phoneNumber || '',
-      notes: this.defaults.notes || ''
+      last_name: [this.defaults.last_name || ''],
+      user_name: this.defaults.user_name || '',
+      password: this.defaults.password || '',
+      mobile: this.defaults.mobile || '',
+      email: this.defaults.email || '',
+      roles_id:'superadmin'
     });
   }
 
@@ -73,11 +74,10 @@ export class CustomerCreateUpdateComponent implements OnInit {
 
   createCustomer() {
     const customer = this.form.value;
+    console.log('ss'+customer);
+    this.API.createItem("user", customer).subscribe((response) => {
 
-    if (!customer.imageSrc) {
-      customer.imageSrc = 'assets/img/avatars/1.jpg';
-    }
-
+    });
     this.dialogRef.close(customer);
   }
 
